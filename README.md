@@ -41,27 +41,36 @@ Es importante remarcar que:
 
 La API se organiza dentro de la carpeta services/, cada archivo cumple un rol específico:
 
-	•	roi_service.py → carga los datos de ROI por género y por país.
+	•	roi_service.py -> carga los datos de ROI por género y por país.
 	
-	•	runtime_service.py → carga la evolución de la duración de las películas.
+	•	runtime_service.py -> carga la evolución de la duración de las películas.
 	
-	•	correlation_service.py → carga la correlación presupuesto-rating.
+	•	correlation_service.py -> carga la correlación presupuesto-rating.
   
 El archivo main.py:
-	•	crea la aplicación FastAPI,
-	•	define los endpoints,
-	•	y utiliza los servicios anteriores para retornar los datos.
+
+	•	crea la aplicación FastAPI
+	
+	•	define los endpoints
+	
+	•	Y utiliza los servicios anteriores para retornar los datos.
 
 Así, la API actúa como una capa de acceso a los resultados producidos en el notebook
 
 # Relación entre ambas partes
 
 El flujo del proyecto es:
+
 	1.	El notebook procesa los datos.
+	
 	2.	Genera archivos JSON/CSV en /artifacts/.
+	
 	3.	La mini-API lee esos archivos y los expone.
 
 De esta manera:
+
 	•	El análisis y el procesamiento pertenecen al Notebook.
+	
 	•	La API funciona como un medio de acceso a esos análisis.
+	
 	•	Ambas partes están conectadas y cumplen con los requisitos del Trabajo Final.
