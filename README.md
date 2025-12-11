@@ -10,13 +10,21 @@ Este proyecto tiene dos partes integradas:
 # Análisis de datos (Notebook)
 
 En el notebook se llevó a cabo todo el procesamiento del dataset TMDB 5000 Movies:
+
 	•	Lectura de los archivos CSV originales.
+	
 	•	Limpieza y preparación de datos (fechas, columnas JSON, valores nulos, filtrado de películas válidas).
+	
 	•	Cálculo de métricas necesarias para responder los tres ejes del trabajo:
+	
 	•	Rentabilidad por género y país (ROI).
+	
 	•	Relación entre presupuesto y rating.
+	
 	•	Evolución de la duración de películas.
+	
 	•	EGeneración de gráficos y estadísticas descriptivas para responder a cada eje.
+	
 	•	Exportación de los resultados procesados a la carpeta artifacts/ en formato JSON y CSV.
   
 En esta primera parte sucede toda la lógica y todo el procesamiento del proyecto.
@@ -32,8 +40,11 @@ Es importante remarcar que:
 	•	Solo lee los archivos JSON/CSV generados previamente y los devuelve en distintos endpoints.
 
 La API se organiza dentro de la carpeta services/, cada archivo cumple un rol específico:
+
 	•	roi_service.py → carga los datos de ROI por género y por país.
+	
 	•	runtime_service.py → carga la evolución de la duración de las películas.
+	
 	•	correlation_service.py → carga la correlación presupuesto-rating.
   
 El archivo main.py:
